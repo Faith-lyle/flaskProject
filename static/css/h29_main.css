@@ -1,0 +1,21 @@
+/* 表格边框 */
+*{
+  margin: 0px;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 9px;
+}
+
+table td,
+table th {
+  border: 1px white solid;
+  padding: 6px 5px;
+  text-align: center;
+}
+
+table th {
+  background-color: lightgray;
+}

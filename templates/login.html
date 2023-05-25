@@ -3,22 +3,23 @@
 
 {% block body %}
 <div class="login-main">
-    <header class="layui-elip">登录</header>
-    <form class="layui-form" method="post">
+        <header class="layui-elip" >登录</header>
+        <form class="layui-form" method="post">
         {{ form.csrf_token }}
         <hr>
-        <div class="layui-input-inline">
+            <div class="layui-input-inline">
             {{ form.account(class="layui-input",placeholder="账号") }}
-        </div>
-        <div class="layui-input-inline">
+            </div>
+            <div class="layui-input-inline">
             {{ form.password(class="layui-input",placeholder="密码") }}
-        </div>
-        <div class="layui-input-inline login-btn">
+            </div>
+            <div class="layui-input-inline login-btn">
             {{ form.submit(class="layui-btn") }}
-        </div>
-        <hr/>
+            </div>
+            <hr>
         <p><a href="javascript:;" class="fr">忘记密码请与系统管理员联系</a></p>
-    </form>
-
-</div>
+        </form>
+    </div>
+{% endblock %}
+{% block script %}
 {% endblock %}

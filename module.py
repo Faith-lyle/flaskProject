@@ -14,7 +14,7 @@ from flask_login import UserMixin
 from extend import db
 
 
-class Account(UserMixin,db.Model):
+class Account(UserMixin, db.Model):
     __tablename__ = 'Account'
     id = db.Column(db.Integer, primary_key=True)
     user_name = db.Column(db.String(64))

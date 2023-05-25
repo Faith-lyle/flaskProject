@@ -19,10 +19,25 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 basedir = path.abspath(path.dirname(__file__))
-login_manager = LoginManager()
+
 
 # Form表单
 class Login(FlaskForm):
     account = StringField(u'账号', validators=[DataRequired()])
     password = PasswordField(u'密码', validators=[DataRequired()])
     submit = SubmitField(u'登录')
+
+
+class EditInfoForm(FlaskForm):
+    name = StringField(u'用户名', validators=[Length(1, 32)])
+    submit = SubmitField(u'提交')
+
+
+class ChangePasswordForm(FlaskForm):
+    old_password = PasswordField(u'原密码', validators=[DataRequired()])
+    password = PasswordField(u'新密码', validators=[DataRequired(), EqualTo('password2', message=u'两次密码必须一致！')])
+    password2 = PasswordField(u'确认新密码', validators=[DataRequired()])
+    submit = SubmitField(u'确认修改')
+
+
+

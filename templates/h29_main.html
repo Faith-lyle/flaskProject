@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}H29{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='/css/h29_main.css') }}">
+{% endblock %}
+
+{% block body %}
+<div style="width: 100%;height:auto;">
+    <div id="h29_mlb" style="height: 410px;border-bottom: #00FF00 1px solid;margin: 5px">
+        <div id = "l1" style="width: 50%;height: 400px;float: left"></div>
+        <div id = "l1" style="width: 50%;height: 390px;float: right">
+            <div style="margin-left: 15px;margin-right: 15px;width: 100%;overflow-y: auto">
+                <iframe frameborder="1"  id="iframe1" width="95%" height="380">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static',filename='./js/h29_main.js') }}"></script>
+{% endblock %}
+
